@@ -30,7 +30,16 @@ body {
 	border: 1px solid white;
 	border-radius: 8px;
 	color: white;
+}
 
+.header-mobile-content-container {
+	display: none;
+}
+
+.header-mobile-menu-button {
+	display: none;
+	background: none;
+	border: none;
 }
 
 .header-title {
@@ -83,7 +92,7 @@ body {
 }
 
 .home-page-button-container {
-	
+	padding-top: 2rem;
 }
 
 .home-page-button {
@@ -94,8 +103,44 @@ body {
 	border-radius: 10px;
 	box-shadow: 0 0 4px white;
 	transition: 0.2s ease;
+	cursor: pointer;
 }
 
 .home-page-button:hover {
 	box-shadow: 0 0 12px white;
+}
+
+@media only screen and (max-width: 600px) {
+	.header-content-container {
+		display: none;
+	}
+
+
+	.header-mobile-content-container {
+		display: flex;
+		flex-direction: column;
+		position: absolute;
+		top: 70px;
+		right: 0;
+		padding: 8px;
+		margin-right: 8px;
+		box-shadow: 0 0 4px white;
+		border-radius: 10px;
+	}
+
+	.header-content {
+		padding-right: 0;
+		padding: 8px;
+		border-radius: 10px;
+		text-align: center;
+	}
+
+	.header-content:hover {
+		background-color: gray;
+	}
+
+	.header-mobile-menu-button {
+		display: flex;
+		cursor: pointer;
+	}
 }
