@@ -2,6 +2,7 @@
 
 :root {
 	--blue-color: #6DC5D1;
+	position: relative;
 }
 
 
@@ -12,12 +13,15 @@ body {
 	background-color: black;
 	color: white;
 	font-family: "Montserrat", sans-serif;
+	position: relative;
 }
 
 .home-container {
+	display: flex;
+	flex-direction: column;
 	width: 100%;
-	height: 100;
-
+	height: 100%;
+	overflow: hidden;
 }
 
 .header-container {
@@ -56,12 +60,20 @@ body {
 	color: white;
 }
 
+.outlet-container {
+	display: flex;
+	flex-direction: column;
+	overflow: auto;
+	width: 100%;
+	height: 100%;
+}
+
 /*Homepage styling*/
 
 .home-page-container {
 	display: flex;
 	justify-content: space-between;
-	padding: 3rem;
+	padding: 3rem 3rem 0 3rem;
 }
 
 .home-page-titles {
@@ -96,7 +108,7 @@ body {
 }
 
 .home-page-button {
-	padding: 1rem;
+	padding: 8px 1rem;
 	font-size: 20px;
 	margin-right: 2rem;
 	border: none;
@@ -108,6 +120,10 @@ body {
 
 .home-page-button:hover {
 	box-shadow: 0 0 12px white;
+}
+
+.about-container {
+	background-color: gainsboro;
 }
 
 @media only screen and (max-width: 600px) {
@@ -143,4 +159,16 @@ body {
 		display: flex;
 		cursor: pointer;
 	}
+
+	.home-page-container {
+		display: flex;
+		flex-direction: column-reverse;
+		align-items: center;
+	}
+
+	.home-page-button {
+		margin-right: 0;
+		margin-bottom: 2rem;
+	}
+	
 }
